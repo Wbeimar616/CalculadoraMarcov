@@ -1,0 +1,120 @@
+/* Fondo general */
+body {
+    background: #f6f4fb;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #22223b;
+}
+
+/* Centrado del contenido principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+
+/* Tarjeta de la calculadora */
+#markov-calculator {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(80, 80, 120, 0.08);
+    padding: 2em 2.5em;
+    max-width: 420px;
+    width: 100%;
+    margin: 2em auto;
+}
+
+#markov-calculator h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #4f378b;
+    text-align: center;
+}
+
+#markov-form label {
+    font-weight: 500;
+    margin-top: 1em;
+    display: block;
+    color: #22223b;
+}
+
+#markov-form input[type="text"],
+#markov-form input[type="number"] {
+    width: 100%;
+    padding: 0.7em;
+    margin-top: 0.3em;
+    border: 1px solid #c9c9e2;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #f8f7fa;
+    box-sizing: border-box;
+}
+
+/* Oculta los spinners de los inputs type="number" en Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Oculta los spinners en Firefox y otros navegadores modernos */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+#markov-form button {
+    width: 100%;
+    padding: 0.9em;
+    margin-top: 1.2em;
+    background: #7c3aed;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#markov-form button:hover {
+    background: #5f27cd;
+}
+
+#markov-result {
+    font-size: 1.1em;
+    margin-top: 1.5em;
+    text-align: center;
+    color: #e9e9f0;
+    min-height: 2em;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #4f378b;
+    margin-bottom: 0.2em;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    margin: 2em 0 1em 0;
+    color: #aaa;
+    font-size: 0.95em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #markov-calculator {
+        padding: 1em 0.5em;
+        max-width: 98vw;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body style="color: #fff; background: #181a20;">
+    <header>
+        <h1>MarkovCalc</h1>
+    </header>
+    <main>
+        <p style="color: #fff;">ingrese los datos correspondientes para realizar los calculos sobre la ecuacion de cadenas de Markov</p>
+        <!-- Fondo que cubre ambas columnas -->
+        <div style="background: #04080f; padding: 2em; border-radius: 16px; display: flex; justify-content: center; align-items: flex-start; gap: 2em; width: 100%; max-width: 1100px; margin: 0 auto;">
+            <!-- Columna izquierda: Inputs -->
+            <div style="flex: 1; min-width: 340px; max-width: 500px; background: #23242b; padding: 2em; border-radius: 12px; box-shadow: 0 2px 8px #0002; display: flex; flex-direction: column;">
+                <h2 style="color: #fff;">Calculadora de Ecuaciones de Markov</h2>
+                <form id="markov-form">
+                    <div style="display: flex; gap: 1em; align-items: center; margin-bottom: 1em;">
+                        <div>
+                            <label for="matrix-size" style="color: #fff;">Tamaño de la matriz:</label><br>
+                            <select id="matrix-size" name="matrix-size">
+                                <option value="2">2 x 2</option>
+                                <option value="3" selected>3 x 3</option>
+                                <option value="4">4 x 4</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="num-steps" style="color: #fff;">Nº de pasos:</label><br>
+                            <input type="number" id="num-steps" name="num-steps" min="1" value="1" style="width: 70px;">
+                        </div>
+                    </div>
+                    <div id="matrix-inputs"></div>
+                    <label style="color: #fff;">Vector de estado inicial:</label><br>
+                    <div id="vector-inputs"></div>
+                    <button type="submit" style="margin-top:1em;">Calcular</button>
+                </form>
+            </div>
+            <!-- Columna derecha: Resultados centrados -->
+            <div style="flex: 1; min-width: 340px; max-width: 500px; background:  #23242b; color: #fff; padding: 2em; border-radius: 12px; box-shadow: 0 2px 8px #0002; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+                <h2 style="color: #fff; margin-top: 0; text-align: center;">Resultado</h2>
+                <div id="markov-result" style="width: 100%; text-align: center;">
+                    <!-- Aquí se mostrarán los resultados -->
+                     
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p style="color: #fff;">&copy; 2025 por Dina Herrera y Wbeimar Sanchez</p>
+    </footer>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
